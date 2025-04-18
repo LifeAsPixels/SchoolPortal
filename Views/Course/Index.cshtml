@@ -1,0 +1,12 @@
+﻿<!-- Views/Course/Index.cshtml -->
+@model List<SchoolPortal.Models.Course>
+
+<h2>Courses Offered</h2>
+<ul>
+    @foreach (var course in Model)
+    {
+        <li>
+            <a href="/Course/Details/@course.Id">@course.Name</a> - @course.Credits credits
+        </li>
+    }
+</ul>
